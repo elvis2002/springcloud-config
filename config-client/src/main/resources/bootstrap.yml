@@ -1,0 +1,12 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://${CONFIG_HOST}:${CONFIG_PORT}
+      label: master
